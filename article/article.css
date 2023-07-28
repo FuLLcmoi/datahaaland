@@ -1,0 +1,90 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #1E1E1E;
+    color: #fff;
+}
+
+header {
+    background-color: #242423;
+    color: #90e9c2;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 16px;
+    color: #ccc;
+}
+
+header a {
+    text-decoration: none;
+}
+
+.stats-haaland {
+    color: #ffff; 
+    font-weight: 600;
+}
+
+
+main {
+    padding: 20px;
+}
+
+.article-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.image-container {
+    flex: 0 0 50%;
+    padding-right: 20px;
+}
+
+.image-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.text-container {
+    flex: 0 0 50%;
+    font-weight: 600;
+}
+
+.text-container p {
+    margin-bottom: 20px;
+    line-height: 1.8;
+}
+
+@media screen and (max-width: 800px) {
+    .article-container {
+        flex-direction: column;
+    }
+
+    .image-container {
+        text-align: center;
+    }
+
+    .image-container img {
+        max-width: 100%;
+        height: auto;
+        margin: 0 auto; 
+    }
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        text-align: left; 
+    }
+}
+

@@ -1,0 +1,37 @@
+const premierLeagueData2022_2023 = {
+  season: "2022-2023",
+  data: [
+    { detail: "Buts", total: 36 },
+    { detail: "Buts attendus (xG)", total: 28.66 },
+    { detail: "Buts dans la surface", total: 35 },
+    { detail: "Buts hors de la surface", total: 1 },
+    { detail: "Buts de la tete", total: 7 },
+    { detail: "Buts du pied gauche", total: 23 },
+    { detail: "Buts du pied droit", total: 6 },
+    { detail: "Buts sur pénalty", total: 7 },
+    { detail: "Tirs cadrés", total: "60 / 106" },
+    { detail: "Occasions créées", total: 30 },
+    { detail: "Grosse occasions manquée", total: 28 },
+    { detail: "Passes décisives", total: 8 },
+    { detail: "Passes déc. attendues (xA)", total: 3.13 },
+    { detail: "Passes réussies", total: "359 / 470" },
+    { detail: "Précision des passes", total: "75.53 %" },
+    { detail: "Dribbles réussis", total: 11 },
+    { detail: "Touche par match", total: 20.0 },
+    { detail: "Duels remportés", total: 2.5 },
+    { detail: "Perte de balle", total: 8.0 },
+    { detail: "Fautes", total: 0.5 },
+    { detail: "Tacles recus", total: 1.5 },
+    { detail: "p", total: 12 },
+    { detail: "p", total: 12 },
+    { detail: "p", total: 12 },
+    { detail: "p", total: 12 },
+    { detail: "p", total: 12 },
+    { detail: "p", total: 12 },
+    { detail: "p", total: 12 },
+    { detail: "p", total: 12 },
+    { detail: "p", total: 12 },
+  ]
+};
+
+export default premierLeagueData2022_2023;

@@ -1,0 +1,198 @@
+section.calendar {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+  }
+  
+  div.calendar-container {
+    display: flex;
+    width: 100%;
+  }
+  
+  div.calendar-box {
+    flex: 1;
+    width: 100%;
+    background-color: #272727;
+    padding: 100px;
+    border-radius: 0;
+    color: #FFFFFF;
+    text-align: center;
+    position: relative;
+  }
+  
+  h2.calendrier-title {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    color: #FFFFFF;
+    font-family: "AvenirNextLTPro-Heavy", sans-serif;
+    text-align: left;
+    margin-top: -50px; 
+    margin-bottom: 10px;
+    margin-left: 100px;
+  }
+  
+  
+  div.calendar-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  div.calendar-info img {
+    width: 20%;
+    height: 20%;
+    margin: 0 40px; 
+    box-shadow: none;
+  }
+  
+  div.calendar-info .club-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 10px;
+  }
+  
+  div.score {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: -60px; 
+  }
+  
+  div.match-info {
+    margin-top: 40px; 
+  }
+  
+  a.left-box-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  a.left-box-link i {
+    margin-right: 5px;
+  }
+  
+  div.calendar-box a.left-box-link.plus-link {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  div.calendar-box a.left-box-link.plus-link i {
+    margin-right: 5px;
+  }
+  
+  div.calendar-box span.calendar-icon {
+    position: relative;
+    top: 4px;
+    margin-right: 5px;
+  }
+  
+  div.calendar-box span.calendar-text {
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+  }
+  
+  .calendar-box.active {
+    background-color: #818181;
+  }
+  
+  .calendar-box.active h2 {
+    color: #FFFFFF;
+  }
+  
+  .calendar-box.active div.calendar-info img {
+    box-shadow: 0 0 10px 2px #90e9c2;
+  }
+  
+  .calendar-box.active div.calendar-info span {
+    color: #FFFFFF;
+  }
+  
+  .calendar-box.active div.score {
+    color: #FFFFFF;
+  }
+  
+  .calendar-box.active a.left-box-link {
+    color: #FFFFFF;
+  }
+  
+  .calendar-box.active a.left-box-link i {
+    color: #FFFFFF;
+  }
+  
+  .calendar-box.active div.calendar-info div {
+    color: #FFFFFF;
+  }
+  
+  div.calendar-box.match1,
+  div.calendar-box.match3 {
+    background-color: #404457;
+  }
+  
+  div.calendar-info .score {
+    order: 2; 
+  }
+  
+  div.calendar-info .match-info {
+    order: 3;
+  }
+  div.calendar-box.match3 .match-info,
+  div.calendar-box.match2 .match-info {
+    text-align: center;
+  }
+  div.calendar-box.match3 .calendar-info,
+  div.calendar-box.match2 .calendar-info {
+    margin-top: 60px;
+  }
+  div.calendar-box.match3 .tt,
+  div.calendar-box.match2 .tt {
+    margin-top: 60px;
+    margin-bottom: -40px;
+  }
+  
+  div.match-info span {
+    line-height: 1.5; 
+  }
+
+  div.calendar-box.match1 a.left-box-link.plus-link {
+    position: absolute;
+    top: -225px;
+    left: 530px;
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  div.calendar-box.match1 a.left-box-link.plus-link span.calendar-text {
+    color: #FFFFFF;
+    margin-left: 6px;
+    position: relative; 
+  }
+  
+  div.calendar-box.match1 a.left-box-link.plus-link span.calendar-text::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #90e9c2;
+    position: absolute; 
+    bottom: -3px; 
+    left: 0;
+  }
+  
+  div.calendar-box.match1 a.left-box-link.plus-link:hover span.calendar-text::after {
+    background: #FF464E;
+  }
