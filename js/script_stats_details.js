@@ -1,4 +1,4 @@
-//
+// addDataToTable
 const performanceData = {
   "2023-2024": [
     { competition: "Premier League", apps: 5, goals: 0, assists: 0, minutes: 360, rating: 6.4 },
@@ -75,11 +75,25 @@ function updateTableBySeason(selectedSeason) {
       <td class="data-cell">${totalMinutes}</td>
       <td class="data-cell">${(totalRating / performanceData[selectedSeason].length).toFixed(2)}</td>
     `;
+
     performanceTable.appendChild(totalRow);
+
+    // Ajouter une courte pause avant d'ajouter la classe fade-in
+    setTimeout(() => {
+      const cellsToUpdate = performanceTable.querySelectorAll(".data-cell");
+      cellsToUpdate.forEach((cell) => {
+        cell.classList.add("fade-in");
+      });
+    }, 10);
   }
 
   generateCompetitionOptions(selectedSeason);
+  
+  if (selectedSeason === "2022-2023") {
+    loadCompetitionData(selectedSeason, "Premier League");
+  }
 }
+
 
 generateSeasonOptions();
 
@@ -142,6 +156,13 @@ async function loadCompetitionData(selectedSeason, selectedCompetition) {
   try {
     const data = await import(`../Data/${selectedSeason}/${selectedCompetition.split(" ").join("_")}.js`);
     updateTableByCompetition(data.default.data);
+    // Ajout de la classe pour déclencher l'effet de slide
+    setTimeout(() => {
+      const cellsWithValue = document.querySelectorAll(".data-cell-value");
+      cellsWithValue.forEach((cell) => {
+        cell.classList.add("slide-in");
+      });
+    }, 100);
   } catch (error) {
     console.error(error);
   }
@@ -175,12 +196,13 @@ function updateTableByCompetition(competitionData) {
   addDataToTable(otherData, otherTable);
 }
 
+
 function addDataToTable(data, table) {
   data.forEach((item) => {
     const newRow = document.createElement("tr");
     newRow.innerHTML = `
       <td class="data-cell">${item.detail}</td>
-      <td class="data-cell">${item.total}</td>
+      <td class="data-cell-value"><span>${item.total}</span></td>
     `;
     table.appendChild(newRow);
   });
