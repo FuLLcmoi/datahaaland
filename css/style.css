@@ -1,6 +1,4 @@
 body {
-  /*background-color: #0D142C;*/
-  /*background-color: #1E1E1E;*/
   background: radial-gradient(ellipse at bottom, #1b2735 0%,#090a0f 100%);
   color: #ffffff;
   font-family: Roboto, sans-serif;
@@ -19,14 +17,16 @@ body {
 }
 
 header {
-  position: sticky; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
-  width: 100%; 
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
   z-index: 1;
   backdrop-filter: blur(10px);
+  box-shadow: 0 50px 24px rgba(0, 0, 0, 0.1);
 }
+
 .header-container span {
   color: white;
   font-weight: 600;
@@ -85,51 +85,7 @@ main {
     margin-left: 10px;
   }
   
-  table {
-    border-collapse: collapse;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  th, td {
-    padding: 10px;
-    color: rgb(0, 0, 0);
-    border: 1px solid rgb(0, 0, 0);
-  }
-  
-  .data-cell {
-    color: #ffffff;
-    transition: color 0.3s ease;
-  }
-  
-  th {
-    background-color: #fff;
-  }
-  
-  tr:first-child th:first-child {
-    border-top-left-radius: 10px;
-  }
-  
-  tr:first-child th:last-child {
-    border-top-right-radius: 10px;
-  }
-  
-  tr:last-child td:first-child {
-    border-bottom-left-radius: 10px;
-  }
-  
-  tr:last-child td:last-child {
-    border-bottom-right-radius: 10px;
-  }
-  
-  tr:last-child th:first-child {
-    border-bottom-left-radius: 10px;
-  }
-  
-  tr:last-child th:last-child {
-    border-bottom-right-radius: 10px;
-  }
-   
+ 
 
 .gallery {
   margin-top: 10px;
@@ -312,56 +268,48 @@ img {
 }
 
 .retour:hover {
-  background-color: rgba(76, 158, 255, 0.2); /* Nouvelle couleur de fond pour le survol */
+  background-color: rgba(76, 158, 255, 0.2); 
 }
 
 .retour:active {
-  background-color: rgba(76, 158, 255, 0.4); /* Nouvelle couleur de fond pour le clic */
+  background-color: rgba(76, 158, 255, 0.4); 
 }
 
 .retour:focus {
   outline: none;
-  box-shadow: 0 0 5px rgba(76, 158, 255, 0.5); /* Nouvelle couleur d'ombre au focus */
+  box-shadow: 0 0 5px rgba(76, 158, 255, 0.5);
 }
 
 .retour {
   text-decoration: none;
 }
 
-/* CSS pour ajuster la taille des images */
 .swiper-slide {
-  flex: 0 0 calc(25% - 5px); /* Ajuster la taille en fonction du nombre d'images affichées (25% pour 4 images côte à côte) */
-  margin-right: 5px; /* Espacement entre les images */
+  flex: 0 0 calc(25% - 5px); 
+  margin-right: 5px;
 }
 
-/* Style de la transition de slide */
+
 .data-cell-value {
   opacity: 0;
-  transform: translateX(-10px); /* Initial position hors de l'écran à gauche */
+  transform: translateX(-10px);
   transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
-/* Effet de slide */
 .slide-in {
   opacity: 1;
   transform: translateX(0);
 }
 
-#performanceTable {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
+.data-cell {
+  color: #ffffff;
+  transition: color 0.3s ease;
 }
 
-#performanceTable th,
-#performanceTable td {
-  border: 1px solid #ddd;
-  padding: 8px;
-  text-align: center;
-}
-
-#performanceTable th {
-  background-color: #f2f2f2;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 .performances {
@@ -374,14 +322,59 @@ img {
   margin-bottom: 20px;
 }
 
-/*   section.performances {
-    margin-top: 20px;
-  } 
-
-  section.performances h1 {
-  margin-left: 20px;
+#performanceTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 }
 
-performanceSection
+#performanceTable th,
+#performanceTable td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: center;
+}
 
-performanceTable
+#performanceTable th {
+  background-color: #ffffff;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+th, td {
+  padding: 10px;
+  color: rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+}
+
+th {
+  background-color: #fff;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+tr:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+
+tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+
+@media (max-width: 767px) {
+  header {
+    position: static; 
+    border-bottom: none; 
+  }
+}
