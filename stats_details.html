@@ -1,25 +1,38 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <title>Stats détaillées de Haaland</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erling Haaland</title>
     <link href="css/style.css" rel="stylesheet">
     <link href="css/cal.css" rel="stylesheet">
+    <link href="css/actu-page.css" rel="stylesheet">
     <link href="css/responsiveCal.css" rel="stylesheet">
+    <link href="responsiveTableau.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
-
 <body>
-    <section class="performances" id="performanceSection">
-        <h1>STATS DÉTAILLÉES DE HAALAND</h1>
+    <header>
+        <nav class="header-container">
+            <a href="https://twitter.com/StatsHHaaland?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
+                <i class="fa-brands fa-twitter" style="color: #4adee9;"></i>
+                <span>@StatsHHaaland</span>
+
+            </a>
+        </nav>
+    </header>
+    <main>
+      <section class="performances" id="performanceSection">
+        <h1>PERFORMANCES</h1>
         <div id="seasonSelectContainer">
-            <label for="seasonSelect">Sélectionner une saison :</label>
-            <select id="seasonSelect">
+          <select id="seasonSelect">
 
-            </select>
-            <a class="retour" href="index.html">Retour à la page précédente</a>
-        </div>
-
+          </select>
+          <button class="detail-button" id="detailButton">Détailler</button>
+      </div>
         <table id="performanceTable">
             <thead>
                 <tr>
@@ -27,64 +40,206 @@
                     <th>Matchs</th>
                     <th>Buts</th>
                     <th>Assists</th>
-                    <th>Minutes jouées</th>
-                    <th>Note moyenne</th>
                 </tr>
             </thead>
             <tbody>
-
-            </tbody>
-        </table>
-
-        <h1>Stats détailler par Compétition</h1>
-        <div id="competitionSelectContainer">
-            <label for="competitionSelect">Sélectionner une compétition :</label>
-            <select id="competitionSelect">
-
-            </select>
-        </div>
-
-        <table id="attackTable">
-          <h1>Attaque</h1>
-            <thead>
                 <tr>
-                    <th>Détail</th>
-                    <th>Total</th>
+                    <td>Total</td>
+                    <td id="totalApps"></td>
+                    <td id="totalGoals"></td>
+                    <td id="totalAssists"></td>
                 </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
-
-        <table id="passesTable">
-            <h1>Passes</h1>
-            <thead>
                 <tr>
-                    <th>Détail</th>
-                    <th>Total</th>
+                  <td class="data-cell">...</td>
+                  <td class="data-cell">...</td>
+                  <td class="data-cell">...</td>
                 </tr>
-            </thead>
-            <tbody>
-
             </tbody>
         </table>
-
-        <table id="otherTable">
-            <h1>Autre</h1>
-            <thead>
-                <tr>
-                    <th>Détail</th>
-                    <th>Total</th>
-                </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
-
-        <script src="js/script_stats_details.js"></script>
     </section>
-</body>
 
+    <section class="actu-page">
+      <div class="container">
+    
+    
+        <input type="radio" name="slider" class="d-none" id="s1" checked>
+        <input type="radio" name="slider" class="d-none" id="s2">
+        <input type="radio" name="slider" class="d-none" id="s3">
+        <input type="radio" name="slider" class="d-none" id="s4">
+        <input type="radio" name="slider" class="d-none" id="s5">
+    
+        <div class="cards">
+          <label for="s1" id="slide1">
+            <div class="card">
+              <div class="image">
+                <img src="https://img.phonandroid.com/2023/07/EASPORTS_FC24.jpg" alt="">
+                <div class="dots">
+                  <div></div>
+                  <div></div>
+                  <div></div>
+                </div>
+              </div>
+              <div class="infos">
+                <span class="name">ACTUALITÉ</span>
+                <span class="lorem">Erling Haaland préféré à 
+                  Kylian Mbappé sur la jaquette d’EA Sport FC24</span>
+              </div>
+              <a href="article/ea.html" class="btn-contact">Lire l'article</a>
+            </div>
+          </label>
+    
+          <label for="s2" id="slide2">
+            <div class="card">
+              <div class="image">
+                <img src="img/gettyimages-1556777036-612x612.jpg" alt="">
+                <div class="dots">
+                  <div class="dot1"></div>
+                  <div class="dot2"></div>
+                  <div class="dot3"></div>
+                </div>
+              </div>
+              <div class="infos">
+                <span class="name">ACTUALITÉ</span>
+                <span class="lorem">description</span>
+              </div>
+              <a href="/contact" class="btn-contact">Lire l'article</a>
+            </div>
+          </label>
+    
+          <label for="s3" id="slide3">
+            <div class="card">
+              <div class="image">
+                <img src="img/gettyimages-1556777036-612x612.jpg" alt="">
+                <div class="dots">
+                  <div class="dot1"></div>
+                  <div class="dot2"></div>
+                  <div class="dot3"></div>
+                </div>
+              </div>
+              <div class="infos">
+                <span class="name">ACTUALITÉ</span>
+                <span class="lorem">description</span>
+              </div>
+              <a href="/contact" class="btn-contact">Lire l'article</a>
+            </div>
+          </label>
+    
+          <label for="s4" id="slide4">
+            <div class="card">
+              <div class="image">
+                <img src="img/gettyimages-1556777036-612x612.jpg" alt="">
+                <div class="dots">
+                  <div class="dot1"></div>
+                  <div class="dot2"></div>
+                  <div class="dot3"></div>
+                </div>
+              </div>
+              <div class="infos">
+                <span class="name">ACTUALITÉ</span>
+                <span class="lorem">description</span>
+              </div>
+              <a href="/contact" class="btn-contact">Lire l'article</a>
+            </div>
+          </label>
+    
+          <label for="s5" id="slide5">
+            <div class="card">
+              <div class="image">
+                <img src="img/gettyimages-1556777036-612x612.jpg" alt="">
+                <div class="dots">
+                  <div class="dot1"></div>
+                  <div class="dot2"></div>
+                  <div class="dot3"></div>
+                </div>
+              </div>
+              <div class="infos">
+                <span class="name">ACTUALITÉ</span>
+                <span class="lorem">description</span>
+              </div>
+              <a href="/contact" class="btn-contact">Lire l'article</a>
+            </div>
+          </label>
+        </div>
+    
+      </div>
+    </section>
+
+    <section class="calendar">
+      <div class="calendar-box match1">
+        <h2 class="calendrier-title">CALENDRIER DES <br>MATCHS</h2>
+        <div class="calendar-info">
+        <h3>Premier League</h3>
+          <div class="club-logos">
+            <img src="image/mancity.png" alt="Logo Club 1">
+            <img src="image/mancity.png" alt="Logo Club 2">
+          </div>
+          <div class="score">5:3</div>
+        <div class="match-info">
+          <span>Etihad Stadium</span>
+          <br>
+          <span>2023-03-12</span>
+          <span>20:45</span>
+        </div>
+      </div>
+      <a class="left-box-link plus-link" href="calendrier.html">
+        <i class="fa-solid fa-calendar" style="color: WHITE;"></i> <span class="calendar-text underline">Plus</span>
+      </a>
+    </div>  
+      <div class="calendar-box match2">
+        <h3 class="tt">Premier League</h3>
+        <div class="calendar-info">
+          <div class="club-logos">
+            <img src="image/mancity.png" alt="Logo Club 1">
+            <img src="image/mancity.png" alt="Logo Club 2">
+          </div>
+          <div class="score">vs</div>
+        </div>
+        <div class="match-info">
+          <span>Etihad Stadium</span>
+          <br>
+          <span>2023-03-12</span>
+          <span>20:45</span>
+        </div>
+      </div>
+      <div class="calendar-box match3">
+        <h3 class="tt">Premier League</h3>
+        <div class="calendar-info">
+          <div class="club-logos">
+            <img src="image/mancity.png" alt="Logo Club 1">
+            <img src="image/mancity.png" alt="Logo Club 2">
+          </div>
+          <div class="score">vs</div>
+        </div>
+        <div class="match-info">
+          <span>Etihad Stadium</span>
+          <br>
+          <span>2023-03-12</span>
+          <span>20:45</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery">
+      <h1>GALERIE</h1>
+      <div class="swiper-container gallery-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="https://media.gettyimages.com/id/1565131567/fr/photo/original-design-jersey-number-and-name-font-of-erling-haaland-of-manchester-city-during-the.jpg?s=612x612&w=0&k=20&c=SeowQdpzzdhasBw3Y6kPahCsyVS2x9RSnCeZoxnA0_4=" alt="Erling Haaland"></div>
+          <div class="swiper-slide"><img src="https://media.gettyimages.com/id/1565005352/fr/photo/erling-haaland-of-manchester-city-applauds-fans-after-the-preseason-friendly-match-between.jpg?s=612x612&w=0&k=20&c=SQQV100_BQhMZRBMkDM0t915TkDeFfmxR3dOAGgCRzc=" alt="Erling Haaland"></div>
+          <div class="swiper-slide"><img src="https://media.gettyimages.com/id/1548445026/fr/photo/erling-haaland-of-manchester-city-during-the-preseason-friendly-match-between-manchester-city.jpg?s=612x612&w=0&k=20&c=cW17bcUpJ2nrFmNAW9SYfCdmKzCUBJ68t3Hl_9YI3Is=" alt="Erling Haaland"></div>
+          <div class="swiper-slide"><img src="https://media.gettyimages.com/id/1548423392/fr/photo/erling-haaland-of-manchester-city-during-the-preseason-friendly-match-between-manchester-city.jpg?s=612x612&w=0&k=20&c=xq-On6LHXVU97Dw9Zk778UpxGw5fCoqak0BcoHjchX4=" alt="Erling Haaland"></div>
+          <div class="swiper-slide"><img src="https://media.gettyimages.com/id/1258850823/fr/photo/norways-erling-haaland-during-a-uefa-euro-2024-qualifier-match-between-norway-and-scotland-at.jpg?s=612x612&w=0&k=20&c=71a_VaNVFBC2r9-OZQFjmU3Ao5KGkGyzRB3Qa2ccJPk=" alt="Erling Haaland"></div>
+          <div class="swiper-slide"><img src="https://media.gettyimages.com/id/1548456164/fr/photo/erling-haaland-of-manchester-city-during-the-preseason-friendly-match-between-manchester-city.jpg?s=612x612&w=0&k=20&c=JNIXpvmXGYeQGa2P6lxNigMIU5e_-2Z3uF-xtQBuAMU=" alt="Erling Haaland"></div>
+        </div>
+      </div>
+      <div class="navigation">
+        <button id="prevBtn"><i class="fa-solid fa-left-long" style="color: #4adee9;"></i></button>
+        <button id="nextBtn"><i class="fa-solid fa-right-long" style="color: #4adee9;"></i></button>
+      </div>
+    </section>
+    
+    
+  </main>
+</body>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+<script src="js/script.js"></script>
 </html>
