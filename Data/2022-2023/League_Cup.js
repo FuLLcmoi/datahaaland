@@ -1,4 +1,4 @@
-const leagueCupData2022_2023 = {
+const ligueCupData2022_2023 = {
   season: "2022-2023",
   data: [
     { detail: "Buts", total: 1 },
@@ -25,4 +25,4 @@ const leagueCupData2022_2023 = {
   ]
 };
 
-export default leagueCupData2022_2023;
+export default ligueCupData2022_2023;
