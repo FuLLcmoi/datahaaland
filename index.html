@@ -9,6 +9,8 @@
     <link href="css/cal.css" rel="stylesheet">
     <link href="css/actu-page.css" rel="stylesheet">
     <link href="css/responsiveCal.css" rel="stylesheet">
+    <link href="responsiveTableau.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -16,7 +18,7 @@
     <header>
         <nav class="header-container">
             <a href="https://twitter.com/StatsHHaaland?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
-                <i class="fa-brands fa-twitter" style="color: #90e9c2;"></i>
+                <i class="fa-brands fa-twitter" style="color: #4adee9;"></i>
                 <span>@StatsHHaaland</span>
 
             </a>
@@ -38,8 +40,6 @@
                     <th>Matchs</th>
                     <th>Buts</th>
                     <th>Assists</th>
-                    <th>Minutes jouées</th>
-                    <th>Note moyenne</th>
                 </tr>
             </thead>
             <tbody>
@@ -48,12 +48,8 @@
                     <td id="totalApps"></td>
                     <td id="totalGoals"></td>
                     <td id="totalAssists"></td>
-                    <td id="totalMinutes"></td>
-                    <td id="averageRating"></td>
                 </tr>
                 <tr>
-                  <td class="data-cell">...</td>
-                  <td class="data-cell">...</td>
                   <td class="data-cell">...</td>
                   <td class="data-cell">...</td>
                   <td class="data-cell">...</td>
@@ -225,24 +221,25 @@
 
     <section class="gallery">
       <h1>GALERIE</h1>
-      <div class="gallery-container">
-        <ul class="image-list">
-        <li><img src="https://media.gettyimages.com/id/1565131567/fr/photo/original-design-jersey-number-and-name-font-of-erling-haaland-of-manchester-city-during-the.jpg?s=612x612&w=0&k=20&c=SeowQdpzzdhasBw3Y6kPahCsyVS2x9RSnCeZoxnA0_4=" alt="Erling Haaland"></li>
-        <li><img src="https://media.gettyimages.com/id/1565005352/fr/photo/erling-haaland-of-manchester-city-applauds-fans-after-the-preseason-friendly-match-between.jpg?s=612x612&w=0&k=20&c=SQQV100_BQhMZRBMkDM0t915TkDeFfmxR3dOAGgCRzc=" alt="Erling Haaland"></li>
-        <li><img src="https://media.gettyimages.com/id/1548445026/fr/photo/erling-haaland-of-manchester-city-during-the-preseason-friendly-match-between-manchester-city.jpg?s=612x612&w=0&k=20&c=cW17bcUpJ2nrFmNAW9SYfCdmKzCUBJ68t3Hl_9YI3Is=" alt="Erling Haaland"></li>
-        <li><img src="https://media.gettyimages.com/id/1548423392/fr/photo/erling-haaland-of-manchester-city-during-the-preseason-friendly-match-between-manchester-city.jpg?s=612x612&w=0&k=20&c=xq-On6LHXVU97Dw9Zk778UpxGw5fCoqak0BcoHjchX4=" alt="Erling Haaland"></li>
-        <li><img src="https://media.gettyimages.com/id/1258850823/fr/photo/norways-erling-haaland-during-a-uefa-euro-2024-qualifier-match-between-norway-and-scotland-at.jpg?s=612x612&w=0&k=20&c=71a_VaNVFBC2r9-OZQFjmU3Ao5KGkGyzRB3Qa2ccJPk=" alt="Erling Haaland"></li>
-        <li><img src="https://media.gettyimages.com/id/1548456164/fr/photo/erling-haaland-of-manchester-city-during-the-preseason-friendly-match-between-manchester-city.jpg?s=612x612&w=0&k=20&c=JNIXpvmXGYeQGa2P6lxNigMIU5e_-2Z3uF-xtQBuAMU=" alt="Erling Haaland"></li>
-        <!-- <li><img src="" alt="Erling Haaland"></li> -->
-        </ul>
+      <div class="swiper-container gallery-container">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="https://media.gettyimages.com/id/1565131567/fr/photo/original-design-jersey-number-and-name-font-of-erling-haaland-of-manchester-city-during-the.jpg?s=612x612&w=0&k=20&c=SeowQdpzzdhasBw3Y6kPahCsyVS2x9RSnCeZoxnA0_4=" alt="Erling Haaland"></div>
+          <div class="swiper-slide"><img src="https://media.gettyimages.com/id/1565005352/fr/photo/erling-haaland-of-manchester-city-applauds-fans-after-the-preseason-friendly-match-between.jpg?s=612x612&w=0&k=20&c=SQQV100_BQhMZRBMkDM0t915TkDeFfmxR3dOAGgCRzc=" alt="Erling Haaland"></div>
+          <div class="swiper-slide"><img src="https://media.gettyimages.com/id/1548445026/fr/photo/erling-haaland-of-manchester-city-during-the-preseason-friendly-match-between-manchester-city.jpg?s=612x612&w=0&k=20&c=cW17bcUpJ2nrFmNAW9SYfCdmKzCUBJ68t3Hl_9YI3Is=" alt="Erling Haaland"></div>
+          <div class="swiper-slide"><img src="https://media.gettyimages.com/id/1548423392/fr/photo/erling-haaland-of-manchester-city-during-the-preseason-friendly-match-between-manchester-city.jpg?s=612x612&w=0&k=20&c=xq-On6LHXVU97Dw9Zk778UpxGw5fCoqak0BcoHjchX4=" alt="Erling Haaland"></div>
+          <div class="swiper-slide"><img src="https://media.gettyimages.com/id/1258850823/fr/photo/norways-erling-haaland-during-a-uefa-euro-2024-qualifier-match-between-norway-and-scotland-at.jpg?s=612x612&w=0&k=20&c=71a_VaNVFBC2r9-OZQFjmU3Ao5KGkGyzRB3Qa2ccJPk=" alt="Erling Haaland"></div>
+          <div class="swiper-slide"><img src="https://media.gettyimages.com/id/1548456164/fr/photo/erling-haaland-of-manchester-city-during-the-preseason-friendly-match-between-manchester-city.jpg?s=612x612&w=0&k=20&c=JNIXpvmXGYeQGa2P6lxNigMIU5e_-2Z3uF-xtQBuAMU=" alt="Erling Haaland"></div>
+        </div>
       </div>
       <div class="navigation">
-        <button id="prevBtn"><i class="fa-solid fa-left-long" style="color: #90e9c2;"></i></button>
-        <button id="nextBtn"><i class="fa-solid fa-right-long" style="color: #90e9c2;"></i></i></button>
-      </div>                
+        <button id="prevBtn"><i class="fa-solid fa-left-long" style="color: #4adee9;"></i></button>
+        <button id="nextBtn"><i class="fa-solid fa-right-long" style="color: #4adee9;"></i></button>
+      </div>
     </section>
+    
     
   </main>
 </body>
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 <script src="js/script.js"></script>
 </html>
