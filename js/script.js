@@ -1,30 +1,14 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const imageList = document.querySelector(".image-list");
-  const prevBtn = document.getElementById("prevBtn");
-  const nextBtn = document.getElementById("nextBtn");
-
-  let currentPosition = 0;
-  const scrollStep = 300;
-
-  function scrollLeft() {
-    currentPosition -= scrollStep;
-    if (currentPosition < 0) {
-      currentPosition = 0;
-    }
-    imageList.style.transform = `translateX(-${currentPosition}px)`;
-  }
-
-  function scrollRight() {
-    const maxScrollAmount = imageList.scrollWidth - imageList.clientWidth;
-    currentPosition += scrollStep;
-    if (currentPosition > maxScrollAmount) {
-      currentPosition = maxScrollAmount;
-    }
-    imageList.style.transform = `translateX(-${currentPosition}px)`;
-  }
-
-  prevBtn.addEventListener("click", scrollLeft);
-  nextBtn.addEventListener("click", scrollRight);
+  // Créer une instance Swiper
+  const swiper = new Swiper(".swiper-container", {
+    slidesPerView: "auto", // Affiche le nombre d'images qui peut tenir dans la largeur du conteneur
+    spaceBetween: 5, // Réduire l'espacement entre les diapositives (ajuster la valeur selon vos préférences)
+    navigation: {
+      // Personnaliser les sélecteurs CSS pour les boutons de navigation personnalisés
+      nextEl: "#nextBtn",
+      prevEl: "#prevBtn",
+    },
+  });
 });
 
 const performanceData = {
@@ -77,16 +61,13 @@ function updateTableBySeason(selectedSeason) {
         <td class="data-cell">${data.Matchs}</td>
         <td class="data-cell">${data.goals}</td>
         <td class="data-cell">${data.assists}</td>
-        <td class="data-cell">${data.minutes}</td>
-        <td class="data-cell">${data.rating}</td>
+
       `;
       performanceTable.appendChild(newRow);
 
       totalMatchs += data.Matchs;
       totalGoals += data.goals;
       totalAssists += data.assists;
-      totalMinutes += data.minutes;
-      totalRating += data.rating;
     });
 
     const totalRow = document.createElement("tr");
@@ -95,9 +76,7 @@ function updateTableBySeason(selectedSeason) {
       <td class="data-cell">${totalMatchs}</td>
       <td class="data-cell">${totalGoals}</td>
       <td class="data-cell">${totalAssists}</td>
-      <td class="data-cell">${totalMinutes}</td>
-      <td class="data-cell">${(totalRating / performanceData[selectedSeason].length).toFixed(2)}</td>
-    `;
+      `;
     performanceTable.appendChild(totalRow);
 
 
