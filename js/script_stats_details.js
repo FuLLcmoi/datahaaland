@@ -1,8 +1,7 @@
-// addDataToTable
 const performanceData = {
   "2023-2024": [
-    { competition: "Premier League", apps: 5, goals: 0, assists: 0, minutes: 360, rating: 6.4 },
-    { competition: "Ligue des champions", apps: 3, goals: 2, assists: 1, minutes: 270, rating: 7.0 },
+    { competition: "Premier League", apps: 0, goals: 0, assists: 0, minutes: 0, rating: 0 },
+    { competition: "Ligue des champions", apps: 0, goals: 0, assists: 0, minutes: 0, rating: 0 },
   ],
   "2022-2023": [
     { competition: "Premier League", apps: 35, goals: 36, assists: 8, minutes: 2779, rating: 7.36 },
@@ -88,7 +87,11 @@ function updateTableBySeason(selectedSeason) {
   }
 
   generateCompetitionOptions(selectedSeason);
-  
+
+  if (selectedSeason === "2023-2024") {
+    loadCompetitionData(selectedSeason, "Premier League");
+  }
+
   if (selectedSeason === "2022-2023") {
     loadCompetitionData(selectedSeason, "Premier League");
   }
