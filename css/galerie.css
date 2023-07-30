@@ -113,7 +113,7 @@
 
 
 .download-button.full-image-download:hover {
-    background-color: rgba(76, 174, 233, 0.8); /* Ajouter cette ligne pour le style du survol du lien */
+    background-color: rgba(76, 174, 233, 0.8); 
 }
 
 @media screen and (max-width: 600px) {
