@@ -414,16 +414,16 @@ tr:first-child th:last-child {
 }
 
 .collection:hover {
-  background-color: rgba(76, 158, 255, 0.2); /* Nouvelle couleur de fond pour le survol */
+  background-color: rgba(76, 158, 255, 0.2);
 }
 
 .collection:active {
-  background-color: rgba(76, 158, 255, 0.4); /* Nouvelle couleur de fond pour le clic */
+  background-color: rgba(76, 158, 255, 0.4); 
 }
 
 .collection:focus {
   outline: none;
-  box-shadow: 0 0 5px rgba(76, 158, 255, 0.5); /* Nouvelle couleur d'ombre au focus */
+  box-shadow: 0 0 5px rgba(76, 158, 255, 0.5); 
 }
 
 .collection {
