@@ -15,46 +15,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <header>
-        <nav class="header-container">
-            <a href="https://twitter.com/StatsHHaaland?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor">
-                <i class="fa-brands fa-twitter" style="color: #4adee9;"></i>
-                <span>@StatsHHaaland</span>
-
-            </a>
-        </nav>
-    </header>
+  <header>
+    <nav class="header-container">
+      <a href="https://twitter.com/StatsHHaaland?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" style="text-decoration: none;">
+        <i class="fa-brands fa-twitter" style="color: #4adee9;"></i>
+        <span>@StatsHHaaland</span>
+      </a>
+    </nav>
+  </header>
+  
     <main>
-      <section class="performances" id="performanceSection">
+      <section class="performances" id="performanceSection" style="max-width: 100%;">
         <h1>PERFORMANCES</h1>
         <div id="seasonSelectContainer">
-          <select id="seasonSelect">
-
-          </select>
+          <select id="seasonSelect"></select>
+          <span class="chargement"><i class="fa-solid fa-arrows-rotate" style="color: #a3a3a3;"></i>Actualisée le 30/07/2023 à 21:41</span>
           <button class="detail-button" id="detailButton">Détailler</button>
-      </div>
+        </div>
         <table id="performanceTable">
-            <thead>
-                <tr>
-                    <th>Compétition</th>
-                    <th>Matchs</th>
-                    <th>Buts</th>
-                    <th>Assists</th>
-                </tr>
-            </thead>
+          <thead>
+            <tr>
+                <th>Compétition</th>
+                <th>Matchs</th>
+                <th>Buts</th>
+                <th>Assists</th>
+            </tr>
+        </thead>
             <tbody>
-                <tr>
-                    <td>Total</td>
-                    <td id="totalApps"></td>
-                    <td id="totalGoals"></td>
-                    <td id="totalAssists"></td>
-                </tr>
-                <tr>
-                  <td class="data-cell">...</td>
-                  <td class="data-cell">...</td>
-                  <td class="data-cell">...</td>
-                </tr>
-            </tbody>
+              <tr>
+                  <td>Total</td>
+                  <td id="totalApps"></td>
+                  <td id="totalGoals"></td>
+                  <td id="totalAssists"></td>
+              </tr>
+              <tr>
+                <td class="data-cell">...</td>
+                <td class="data-cell">...</td>
+                <td class="data-cell">...</td>
+              </tr>
+          </tbody>
         </table>
     </section>
 
@@ -220,6 +219,7 @@
     </section>
 
     <section class="gallery">
+      <a class="collection" href="galerie.html">Collection</a>
       <h1>GALERIE</h1>
       <div class="swiper-container gallery-container">
         <div class="swiper-wrapper">
