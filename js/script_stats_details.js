@@ -1,3 +1,4 @@
+// addDataToTable
 const performanceData = {
   "2023-2024": [
     { competition: "Premier League", apps: 0, goals: 0, assists: 0, minutes: 0, rating: 0 },
@@ -9,6 +10,46 @@ const performanceData = {
     { competition: "FA Cup", apps: 4, goals: 3, assists: 0, minutes: 311, rating: 7.20 },
     { competition: "League Cup", apps: 2, goals: 1, assists: 0, minutes: 107, rating: 6.75 },
     { competition: "Community Shield", apps: 1, goals: 0, assists: 0, minutes: 90, rating: 6.20 },
+  ],
+  "2021-2022": [
+    { competition: "Bundesliga", apps: 24, goals: 22, assists: 7, minutes: 1915, rating: 7.77 },
+    { competition: "Ligue des Champions", apps: 3, goals: 3, assists: 0, minutes: 203, rating: 7.00 },
+    { competition: "WC Qualification Europe", apps: 6, goals: 5, assists: 0, minutes: 493, rating: 7.46 },
+    { competition: "DFB Pokal", apps: 2, goals: 4, assists: 0, minutes: 180, rating: 8.56 },
+    { competition: "DFL Super Cup", apps: 1, goals: 0, assists: 0, minutes: 90, rating: 5.90 },
+  ],
+  "2020-2021": [
+    { competition: "Bundesliga", apps: 28, goals: 27, assists: 6, minutes: 2410, rating: 7.87 },
+    { competition: "Ligue des Champions", apps: 8, goals: 10, assists: 2, minutes: 705, rating: 7.96 },
+    { competition: "DFB Pokal", apps: 4, goals: 3, assists: 1, minutes: 327, rating: 7.35 },
+    { competition: "DFL Super Cup", apps: 1, goals: 1, assists: 1, minutes: 68, rating: 6.20 },
+    { competition: "UEFA Nations League", apps: 4, goals: 6, assists: 1, minutes: 346, rating: 7.83 },
+  ],
+  "2019-2020": [
+    { competition: "Bundesliga", apps: 14, goals: 16, assists: 4, minutes: 983, rating: 7.44 },
+    { competition: "Ligue des Champions", apps: 8, goals: 10, assists: 2, minutes: 554, rating: 7.47 },
+    { competition: "DFB Pokal", apps: 4, goals: 3, assists: 1, minutes: 44, rating: 6.90 },
+    { competition: "Autriche Cup", apps: 1, goals: 4, assists: 0, minutes: 90, rating:  8.49},
+    { competition: "Éliminatoires Euro", apps: 3, goals: 0, assists: 0, minutes: 170, rating: 6.16 },
+  ],
+  "2018-2019": [
+    { competition: "Bundesliga", apps: 2, goals: 1, assists: 0, minutes: 83, rating: 7.10 },
+    { competition: "Europa Ligue", apps: 5, goals: 4, assists: 1, minutes: 411, rating: 7.98 },
+    { competition: "OFB Cup", apps: 2, goals: 0, assists: 0, minutes: 82, rating: 0 },
+    { competition: "World Cup U20", apps: 3, goals: 9, assists: 0, minutes: 270, rating: 0 },
+    { competition: "Euro U21", apps: 3, goals: 0, assists: 1, minutes: 215, rating: 0 },
+  ],
+  "2017-2018": [
+    { competition: "Eliteserien", apps: 25, goals: 12, assists: 4, minutes: 1596, rating: 6.86 },
+    { competition: "Youth League", apps: 1, goals: 0, assists: 0, minutes: 30, rating: 0 },
+    { competition: "Euro U19", apps: 9, goals: 10, assists: 2, minutes: 0, rating: 0 },
+  ],
+  "2016-2017": [
+    { competition: "Eliteserien", apps: 14, goals: 2, assists: 1, minutes: 383, rating: 6.22 },
+    { competition: "Norvège Cup", apps: 6, goals: 2, assists: 0, minutes: 258, rating: 7.74 },
+  ],
+  "2015-2016": [
+    { competition: "D1 Norvègienne", apps: 16, goals: 0, assists: 0, minutes: 422, rating: 0 },
   ],
 };
 
@@ -94,6 +135,34 @@ function updateTableBySeason(selectedSeason) {
 
   if (selectedSeason === "2022-2023") {
     loadCompetitionData(selectedSeason, "Premier League");
+  }
+
+  if (selectedSeason === "2021-2022") {
+    loadCompetitionData(selectedSeason, "Bundesliga");
+  }
+
+  if (selectedSeason === "2020-2021") {
+    loadCompetitionData(selectedSeason, "Bundesliga");
+  }
+
+  if (selectedSeason === "2019-2020") {
+    loadCompetitionData(selectedSeason, "Bundesliga");
+  }
+
+  if (selectedSeason === "2018-2019") {
+    loadCompetitionData(selectedSeason, "Bundesliga");
+  }
+
+  if (selectedSeason === "2017-2018") {
+    loadCompetitionData(selectedSeason, "Eliteserien");
+  }
+
+  if (selectedSeason === "2016-2017") {
+    loadCompetitionData(selectedSeason, "Eliteserien");
+  }
+
+  if (selectedSeason === "2015-2016") {
+    loadCompetitionData(selectedSeason, "D1 Norvègienne");
   }
 }
 
