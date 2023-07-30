@@ -392,12 +392,15 @@ tr:first-child th:last-child {
 
 .fa-arrows-rotate {
   margin-right: 5px;
+  margin-left: 5px;
 }
 
 .chargement {
-  font-weight: bold;
+  margin-left: 5px;
+  margin-top: 10px;
+  font-weight: 600;
   font-size: 15px;
-  color: #a3a3a3;
+  color: #c5c5c5;
 }
 
 .collection {
