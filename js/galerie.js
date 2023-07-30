@@ -1,22 +1,16 @@
-// JavaScript pour la galerie de photos de Haaland
-
-// Ajouter un gestionnaire d'événement au bouton de téléchargement lors du chargement de la page
 document.addEventListener("DOMContentLoaded", function () {
     const downloadButton = document.querySelector(".download-button");
     downloadButton.addEventListener("click", function () {
         const fullImage = document.querySelector(".full-image");
         const imageUrl = fullImage.src;
 
-        // Créer un lien de téléchargement
         const downloadLink = document.createElement("a");
         downloadLink.href = imageUrl;
-        downloadLink.download = "haaland_image"; // Vous pouvez spécifier ici le nom du fichier à télécharger
+        downloadLink.download = "haaland_image";
         document.body.appendChild(downloadLink);
 
-        // Cliquez sur le lien de téléchargement pour lancer le téléchargement
         downloadLink.click();
 
-        // Supprimer le lien de téléchargement après le téléchargement
         document.body.removeChild(downloadLink);
     });
 });
