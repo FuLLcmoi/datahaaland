@@ -399,3 +399,33 @@ tr:first-child th:last-child {
   font-size: 15px;
   color: #a3a3a3;
 }
+
+.collection {
+  padding: 8px; 
+  font-size: 16px; 
+  border: 2px solid #ffffff; 
+  background-color: transparent;
+  color: #ffffff;
+  border-radius: 5px;
+  appearance: none;
+  cursor: pointer;
+  float: right;
+  margin-right: 20px;
+}
+
+.collection:hover {
+  background-color: rgba(76, 158, 255, 0.2); /* Nouvelle couleur de fond pour le survol */
+}
+
+.collection:active {
+  background-color: rgba(76, 158, 255, 0.4); /* Nouvelle couleur de fond pour le clic */
+}
+
+.collection:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(76, 158, 255, 0.5); /* Nouvelle couleur d'ombre au focus */
+}
+
+.collection {
+  text-decoration: none;
+}
