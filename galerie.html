@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collection de photos de Haaland</title>
+    <link href="css/galerie.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav class="header-container">
+            <a href="index.html">
+                <span>@StatsHHaaland</span>
+            </a>
+        </nav>
+    </header>
+
+    <section class="gallery-section">
+        <h1 class="gallery-title">Galerie de photos de Haaland</h1>
+        <div class="gallery-container" id="galleryContainer">
+            <div class="gallery-item" onclick="openImage(this)">
+                <img src="img/gettyimages-1556776983-612x612.jpg" alt="Haaland">
+            </div>
+            <div class="gallery-item" onclick="openImage(this)">
+                <img src="img/gettyimages-1556777381-612x612.jpg" alt="Haaland">
+            </div>
+            <div class="gallery-item" onclick="openImage(this)">
+                <img src="img/gettyimages-1556777036-612x612.jpg" alt="Haaland">
+            </div>
+            <div class="gallery-item" onclick="openImage(this)">
+                <img src="img/gettyimages-1572360171-612x612.jpg" alt="Haaland">
+            </div>
+            <div class="gallery-item" onclick="openImage(this)">
+                <img src="img/gettyimages-1580750775-612x612.jpg" alt="Haaland">
+            </div>
+            <div class="gallery-item" onclick="openImage(this)">
+                <img src="img/gettyimages-1580638572-612x612.jpg" alt="Haaland">
+            </div>
+            <div class="gallery-item" onclick="openImage(this)">
+                <img src="img/gettyimages-1580638050-612x6122.jpg" alt="Haaland">
+            </div>
+            <div class="gallery-item" onclick="openImage(this)">
+                <img src="img/gettyimages-1573606056-612x61222.jpg" alt="Haaland">
+            </div>
+            <div class="gallery-item" onclick="openImage(this)">
+                <img src="img/gettyimages-1573603363-612x613.jpg" alt="Haaland">
+            </div>
+            <div class="gallery-item" onclick="openImage(this)">
+                <img src="img/gettyimages-1573869051-612x614.jpg" alt="Haaland">
+            </div>
+            <div class="gallery-item" onclick="openImage(this)">
+                <img src="img/gettyimages-1556776983-612x615.jpg" alt="Haaland">
+            </div>
+        </div>
+    </section>
+
+    <div class="full-image-container" onclick="closeImage()">
+        <img class="full-image" src="" alt="Haaland Full Image">
+        <div class="download-button-container">
+            <button class="download-button full-image-download">Télécharger</button>
+        </div>
+    </div>
+
+    <script src="js/galerie.js"></script>
+
+</body>
+
+</html>
