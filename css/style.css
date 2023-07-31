@@ -1,4 +1,6 @@
 body {
+  /*background-color: #0D142C;*/
+  /*background-color: #1E1E1E;*/
   background: radial-gradient(ellipse at bottom, #1b2735 0%,#090a0f 100%);
   color: #ffffff;
   font-family: Roboto, sans-serif;
@@ -277,16 +279,46 @@ img {
 
 .retour:focus {
   outline: none;
-  box-shadow: 0 0 5px rgba(76, 158, 255, 0.5);
+  box-shadow: 0 0 5px rgba(76, 158, 255, 0.5); 
 }
 
 .retour {
   text-decoration: none;
 }
 
+.collection {
+  padding: 8px; 
+  font-size: 16px; 
+  border: 2px solid #ffffff; 
+  background-color: transparent;
+  color: #ffffff;
+  border-radius: 5px;
+  appearance: none;
+  cursor: pointer;
+  float: right;
+  margin-right: 20px;
+}
+
+.collection:hover {
+  background-color: rgba(76, 158, 255, 0.2); 
+}
+
+.collection:active {
+  background-color: rgba(76, 158, 255, 0.4); 
+}
+
+.collection:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(76, 158, 255, 0.5); 
+}
+
+.collection {
+  text-decoration: none;
+}
+
 .swiper-slide {
-  flex: 0 0 calc(25% - 5px); 
-  margin-right: 5px;
+  flex: 0 0 calc(25% - 5px);
+  margin-right: 5px; 
 }
 
 
@@ -314,7 +346,7 @@ body {
 
 .performances {
   padding: 20px;
-  margin-top: 20px;
+  margin-top: -20px;
 }
 
 .performances h1 {
@@ -332,7 +364,7 @@ body {
 
 #performanceTable th,
 #performanceTable td {
-  border: 1px solid #ddd;
+  border: 1px solid #ffffff;
   padding: 8px;
   text-align: center;
 }
@@ -356,7 +388,7 @@ th, td {
 }
 
 th {
-  background-color: #fff;
+  background-color: #ffffff;
 }
 
 h1 {
@@ -372,12 +404,14 @@ tr:first-child th:last-child {
   border-top-right-radius: 10px;
 }
 
+
 @media (max-width: 767px) {
   header {
     position: static; 
-    border-bottom: none; 
+    border-bottom: none;
   }
 }
+
 
 @media (max-width: 600px) {
   img {
@@ -397,41 +431,19 @@ tr:first-child th:last-child {
 
 .chargement {
   margin-left: 5px;
-  margin-top: 15px;
+  margin-top: 10px;
   font-weight: 600;
   font-size: 15px;
   color: #c5c5c5;
 }
 
-.collection {
-  padding: 8px; 
-  font-size: 16px; 
-  border: 2px solid #ffffff; 
-  background-color: transparent;
-  color: #ffffff;
-  border-radius: 5px;
-  appearance: none;
-  cursor: pointer;
-  float: right;
-  margin-right: 20px;
+
+.fa-user {
+  margin-right: 15px;
+  font-size: 24px;
 }
 
-.collection:hover {
-  background-color: rgba(76, 158, 255, 0.2);
-}
 
-.collection:active {
-  background-color: rgba(76, 158, 255, 0.4); 
-}
-
-.collection:focus {
-  outline: none;
-  box-shadow: 0 0 5px rgba(76, 158, 255, 0.5); 
-}
-
-.collection {
-  text-decoration: none;
-}
 
 .biography-section {
   margin-left: 20px;
@@ -454,13 +466,15 @@ tr:first-child th:last-child {
 
 .info-container {
   margin-left: 20px;
-  display: flex;
-  flex-direction: column;
+  flex-grow: 1; 
 }
 
 .info-container h2 {
+  text-decoration: underline;
+  text-underline-offset: 5px;
   font-size: 24px;
-  margin-bottom: 10px;
+  margin-top: -10px;
+  margin-bottom: 30px;
 }
 
 .info-container ul {
@@ -468,20 +482,21 @@ tr:first-child th:last-child {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
-  list-style: none;
+  list-style: none; 
 }
 
 .info-container li {
   font-size: 16px;
+  flex-basis: calc(33.33% - 10px);
+  margin-bottom: 10px;
   display: flex;
-  align-items: center;
-  margin-right: 40px;
 }
 
 .info-container li span {
   font-weight: bold;
-  min-width: 150px;
+  min-width: 80px; 
 }
+
 
 
 @media (max-width: 600px) {
@@ -491,26 +506,46 @@ tr:first-child th:last-child {
   }
 
   .image-container img {
+    position: center;
     width: 150px;
     height: 150px;
   }
 
   .info-container h2 {
+    margin-top: 10px;
     font-size: 20px;
     margin-bottom: 10px;
   }
 
   .info-container li {
     font-size: 14px;
-    display: flex;
-    align-items: center;
-    margin-right: 0;
-    margin-bottom: 10px;
-    width: 100%;
+    flex-basis: 100%; 
+    margin-bottom: 5px; 
   }
 
   .info-container li span {
-    min-width: 50%;
+    min-width: 100px;
   }
 }
 
+.bio-city {
+  background: rgba(0, 0, 0, 0.281);
+  padding: 5px 10px;
+  border-radius: 15px;
+  text-align: center;
+  font-size: 15px;
+}
+
+.bio-city .icon-bio-city {
+  width: 30px;
+  height: 30px;
+  vertical-align: middle; 
+  margin-right: 5px; 
+}
+
+.icon-norway {
+  width: 15px; 
+  height: 15px;
+  vertical-align: middle; 
+  margin-right: 5px;
+}
