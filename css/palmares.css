@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #0c0f1d;
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+}
+
+.palmares-section, .records-section {
+    margin-bottom: 30px;
+}
+
+.palmares-section h1, .records-section h2 {
+    color: #fff;
+}
+
+.trophy-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.trophy-item {
+    flex: 0 0 calc(50% - 20px);
+    margin: 10px;
+    padding: 20px;
+    border: 1px solid #A367E3;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.trophy-item img {
+    max-width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.trophy-header {
+    color: #fff;
+    font-weight: 600;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.trophy-info {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+@media screen and (max-width: 500px) {
+    .trophy-item {
+        flex: 0 0 100%;
+    }
+}
