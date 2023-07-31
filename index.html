@@ -9,6 +9,7 @@
     <link href="css/cal.css" rel="stylesheet">
     <link href="css/actu-page.css" rel="stylesheet">
     <link href="css/responsiveCal.css" rel="stylesheet">
+    <link href="css/tableau.css" rel="stylesheet">
     <link href="responsiveTableau.css" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -16,17 +17,22 @@
 </head>
 <body>
   <header>
-    <nav class="header-container">
-      <a href="https://twitter.com/StatsHHaaland?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" style="text-decoration: none;">
-        <i class="fa-brands fa-twitter" style="color: #4adee9;"></i>
-        <span>@StatsHHaaland</span>
-      </a>
-    </nav>
-  </header>
+    <div class="navbar">
+        <div class="item js-reveal-1">
+            <a href="palmares.html">Palmarès</a>
+        </div>
+        <div class="item js-reveal-2">
+            <a href="actu.html">Actu</a>
+        </div>
+        <div class="item js-reveal-3">
+            <a href="#video.html">Vidéo</a>
+        </div>
+    </div>
+</header>  
 
   <section class="biography-section">
     <div class="image-container">
-      <img src="https://www.mancity.com/meta/media/e2lawnab/erling-haaland.png" alt="Image du joueur">
+      <img src="https://media.gettyimages.com/id/1571872010/fr/photo/erling-haaland-of-manchester-city-looks-on-after-the-preseason-friendly-match-between.jpg?s=612x612&w=0&k=20&c=leTUL1wkSSHa2fUtX4De7tTZtV5P78kYDqIX6xGvfpM=" alt="Image du joueur">
       <p class="bio-city">
         <img src="image/mancity.png" alt="Logo Manchester City" class="icon-bio-city">
         Manchester City
@@ -104,115 +110,11 @@
         </div>
       </div>
       <div class="navigation">
-        <button id="prevBtn"><i class="fa-solid fa-left-long" style="color: #4adee9;"></i></button>
-        <button id="nextBtn"><i class="fa-solid fa-right-long" style="color: #4adee9;"></i></button>
+        <button id="prevBtn"><i class="fa-solid fa-left-long" style="color: #8BE8E5;"></i></button>
+        <button id="nextBtn"><i class="fa-solid fa-right-long" style="color: #8BE8E5;"></i></button>
       </div>
     </section>
-    <section class="actu-page">
-      <div class="container">
-    
-    
-        <input type="radio" name="slider" class="d-none" id="s1" checked>
-        <input type="radio" name="slider" class="d-none" id="s2">
-        <input type="radio" name="slider" class="d-none" id="s3">
-        <input type="radio" name="slider" class="d-none" id="s4">
-        <input type="radio" name="slider" class="d-none" id="s5">
-    
-        <div class="cards">
-          <label for="s1" id="slide1">
-            <div class="card">
-              <div class="image">
-                <img src="https://img.phonandroid.com/2023/07/EASPORTS_FC24.jpg" alt="">
-                <div class="dots">
-                  <div></div>
-                  <div></div>
-                  <div></div>
-                </div>
-              </div>
-              <div class="infos">
-                <span class="name">ACTUALITÉ</span>
-                <span class="lorem">Erling Haaland préféré à 
-                  Kylian Mbappé sur la jaquette d’EA Sport FC24</span>
-              </div>
-              <a href="article/ea.html" class="btn-contact">Lire l'article</a>
-            </div>
-          </label>
-    
-          <label for="s2" id="slide2">
-            <div class="card">
-              <div class="image">
-                <img src="img/gettyimages-1556777036-612x612.jpg" alt="">
-                <div class="dots">
-                  <div class="dot1"></div>
-                  <div class="dot2"></div>
-                  <div class="dot3"></div>
-                </div>
-              </div>
-              <div class="infos">
-                <span class="name">ACTUALITÉ</span>
-                <span class="lorem">description</span>
-              </div>
-              <a href="article/" class="btn-contact">Lire l'article</a>
-            </div>
-          </label>
-    
-          <label for="s3" id="slide3">
-            <div class="card">
-              <div class="image">
-                <img src="img/gettyimages-1556777036-612x612.jpg" alt="">
-                <div class="dots">
-                  <div class="dot1"></div>
-                  <div class="dot2"></div>
-                  <div class="dot3"></div>
-                </div>
-              </div>
-              <div class="infos">
-                <span class="name">ACTUALITÉ</span>
-                <span class="lorem">description</span>
-              </div>
-              <a href="article/" class="btn-contact">Lire l'article</a>
-            </div>
-          </label>
-    
-          <label for="s4" id="slide4">
-            <div class="card">
-              <div class="image">
-                <img src="img/gettyimages-1556777036-612x612.jpg" alt="">
-                <div class="dots">
-                  <div class="dot1"></div>
-                  <div class="dot2"></div>
-                  <div class="dot3"></div>
-                </div>
-              </div>
-              <div class="infos">
-                <span class="name">ACTUALITÉ</span>
-                <span class="lorem">description</span>
-              </div>
-              <a href="article/" class="btn-contact">Lire l'article</a>
-            </div>
-          </label>
-    
-          <label for="s5" id="slide5">
-            <div class="card">
-              <div class="image">
-                <img src="img/gettyimages-1556777036-612x612.jpg" alt="">
-                <div class="dots">
-                  <div class="dot1"></div>
-                  <div class="dot2"></div>
-                  <div class="dot3"></div>
-                </div>
-              </div>
-              <div class="infos">
-                <span class="name">ACTUALITÉ</span>
-                <span class="lorem">description</span>
-              </div>
-              <a href="article/" class="btn-contact">Lire l'article</a>
-            </div>
-          </label>
-        </div>
-    
-      </div>
-    </section>
+   
 
     <section class="calendar">
       <div class="calendar-box match1">
