@@ -20,7 +20,8 @@ main {
 }
 
 .palmares-section h1, .records-section h2 {
-    color: #fff;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .trophy-container {
@@ -32,7 +33,7 @@ main {
     flex: 0 0 calc(50% - 20px);
     margin: 10px;
     padding: 20px;
-    border: 1px solid #A367E3;
+    border: 1px solid #8BE8E5;
     border-radius: 10px;
     text-align: center;
 }
@@ -44,7 +45,8 @@ main {
 }
 
 .trophy-header {
-    color: #fff;
+    color: #ffffff;
+    text-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5);
     font-weight: 600;
     padding: 10px;
     border-radius: 5px;
