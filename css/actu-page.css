@@ -168,7 +168,7 @@
 .actu-page #s5:checked~.cards #slide5 {
     box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 50%); 
     transform: translate3d(0, 0, 0);
-    --current-color1 : #111720;
+    --current-color1 : #b8c1ec;
     /*--current-color1: #fad00c;*/
     --current-color2: #ECEAED;
 }
