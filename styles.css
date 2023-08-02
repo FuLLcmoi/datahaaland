@@ -10,7 +10,7 @@ header .item a {
   text-decoration: none;
   font-size: 18px;
   font-weight: 700;
-  text-shadow: var(--shadow23);
+  text-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
   position: relative;
 }
 
@@ -328,31 +328,17 @@ iframe {
       display: block;
     }
   }
-  
-/* Styles pour les appareils mobiles */
+
 @media screen and (max-width: 768px) {
     .goal-details-section {
       display: none;
     }
   }
 
-
-/* Masquer les détails des buts sur les appareils mobiles */
-@media screen and (max-width: 768px) {
-    .goal-details {
-      display: none;
-    }
-  
-    .goal-item.active .goal-details {
-      display: block;
-    }
-  }
-  
-  /* Afficher les vidéos en plein écran sur les appareils mobiles */
   @media screen and (max-width: 500px) {
     .goal-item iframe {
       width: 100%;
-      height: 00px; /* Ajustez la hauteur de la vidéo selon vos besoins */
+      height: 200px; 
     }
   }
   
