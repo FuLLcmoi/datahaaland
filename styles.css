@@ -104,16 +104,16 @@ h1 {
     border-radius: 10px;
     text-align: center;
     display: flex;
-    flex-wrap: wrap; /* Pour empêcher les éléments de se décaler sur une seule ligne */
+    flex-wrap: wrap;
     justify-content: space-between;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); 
-    align-items: center; /* Aligne les éléments verticalement au centre */
+    align-items: center;
 }
 
 .goal-item img {
     max-width: 50px;
     height: auto;
-    margin-left: auto; /* Placer le logo à droite */
+    margin-left: auto;
 }
 
 .goal-number {
@@ -125,7 +125,7 @@ h1 {
     font-weight: 600;
     font-size: 20px;
     margin-top: 5px;
-    flex-grow: 1; /* Pour centrer le texte au milieu */
+    flex-grow: 1;
 }
 
 p {
@@ -183,7 +183,6 @@ p {
 }
 
 
-/* CSS pour styliser le bouton "Voir le but" */
 .view-goal-button {
     background-color: #8BE8E5;
     border-radius: 2rem;
@@ -194,7 +193,6 @@ p {
     transition: transform 0.3s ease;
 }
 
-/* Styles lorsque le bouton est cliqué */
 .view-goal-button:active {
     transform: scale(0.95);
 }
@@ -255,7 +253,6 @@ iframe {
     font-weight: 600;
 }
 
-/* Styles pour les cadres dont les détails sont ouverts */
 .goal-item.active {
     flex: 1 0 calc(30% - 100px);
 }
@@ -263,28 +260,9 @@ iframe {
 .video-details {
     margin-top: 30px;
     text-align: center;
-    position: relative; /* Permet de positionner les flèches par rapport à ce div */
+    position: relative; 
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* Styles pour le conteneur des boutons */
 .slider-nav {
     position: relative;
     display: flex;
@@ -293,7 +271,6 @@ iframe {
     margin-top: 20px;
 }
 
-/* Styles pour les boutons "Précédent" et "Suivant" */
 .prev-button,
 .next-button {
     background-color: #8BE8E5;
@@ -308,29 +285,24 @@ iframe {
     transition: background-color 0.3s ease;
 }
 
-/* Styles au survol des boutons */
 .prev-button:hover,
 .next-button:hover {
     background-color: #0c0f1d;
     color: #8BE8E5;
 }
 
-/* Style pour l'icône de la flèche gauche */
 .prev-button i {
     margin-right: 5px;
 }
 
-/* Style pour l'icône de la flèche droite */
 .next-button i {
     margin-left: 5px;
 }
 
-/* Styles pour les écrans de grande taille */
-
 @media screen and (min-width: 1201px) {
     .goals-container {
       display: grid;
-      grid-template-columns: repeat(4, 1fr); /* Deux colonnes par ligne */
+      grid-template-columns: repeat(4, 1fr); 
       gap: 20px;
     }
   }
@@ -338,24 +310,49 @@ iframe {
 @media screen and (max-width: 1200px) {
     .goals-container {
       display: grid;
-      grid-template-columns: repeat(3, 1fr); /* Deux colonnes par ligne */
+      grid-template-columns: repeat(3, 1fr); 
       gap: 20px;
     }
   }
   
-  /* Styles pour les tablettes en mode paysage et écrans moyens */
   @media screen and (min-width: 768px) and (max-width: 1023px) {
     .goals-container {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* Deux colonnes par ligne */
+      grid-template-columns: repeat(2, 1fr); 
       gap: 20px;
     }
   }
   
-  /* Styles pour les téléphones et tablettes en mode portrait */
   @media screen and (max-width: 767px) {
     .goals-container {
-      display: block; /* Un cadre par ligne */
+      display: block;
+    }
+  }
+  
+/* Styles pour les appareils mobiles */
+@media screen and (max-width: 768px) {
+    .goal-details-section {
+      display: none;
+    }
+  }
+
+
+/* Masquer les détails des buts sur les appareils mobiles */
+@media screen and (max-width: 768px) {
+    .goal-details {
+      display: none;
+    }
+  
+    .goal-item.active .goal-details {
+      display: block;
+    }
+  }
+  
+  /* Afficher les vidéos en plein écran sur les appareils mobiles */
+  @media screen and (max-width: 500px) {
+    .goal-item iframe {
+      width: 100%;
+      height: 00px; /* Ajustez la hauteur de la vidéo selon vos besoins */
     }
   }
   
