@@ -118,7 +118,6 @@ function updateTableBySeason(selectedSeason) {
 
     performanceTable.appendChild(totalRow);
 
-    // Ajouter une courte pause avant d'ajouter la classe fade-in
     setTimeout(() => {
       const cellsToUpdate = performanceTable.querySelectorAll(".data-cell");
       cellsToUpdate.forEach((cell) => {
@@ -228,7 +227,6 @@ async function loadCompetitionData(selectedSeason, selectedCompetition) {
   try {
     const data = await import(`../Data/${selectedSeason}/${selectedCompetition.split(" ").join("_")}.js`);
     updateTableByCompetition(data.default.data);
-    // Ajout de la classe pour déclencher l'effet de slide
     setTimeout(() => {
       const cellsWithValue = document.querySelectorAll(".data-cell-value");
       cellsWithValue.forEach((cell) => {
